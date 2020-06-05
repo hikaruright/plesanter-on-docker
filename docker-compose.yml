@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+    app:
+        container_name: plesanter_app
+        build: ./app
+        tty: true
+        ports: 
+            - 5000:5000
+        volumes: 
+            - ./app/Rds.json:/web/Implem.Pleasanter/App_Data/Parameters/Rds.json
+        environment:
+            - TZ=Asia/Tokyo
+            # - ASPNETCORE_URLS=https://+;http://+;
+            # ↓一説によるとこれで直るらしいがローカルアクセスすら無理になる
+            # - ASPNETCORE_URLS=http://+;
+
+    db:
+        container_name: plesanter_db
+        image: postgres:12.3-alpine
+        environment: 
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: plesanter
+            POSTGRES_DB: Implem.Pleasanter

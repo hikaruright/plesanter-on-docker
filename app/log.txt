@@ -1,0 +1,574 @@
+<INFO> UsersConfigurator.Execute: Implem.Pleasanter_Owner
+<INFO> UsersConfigurator.Execute: Implem.Pleasanter_User
+<INFO> TablesConfigurator.ConfigureTableSet: Tenants
+<ERROR> <>c__DisplayClass0_0.<Configure>b__0: [Tenants]: Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (99): Cannot assign requested address [::1]:5432
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open()
+   at Implem.PostgreSql.PostgreSqlConnection.Open() in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Rds\Implem.PostgreSql\PostgreSqlConnection.cs:line 98
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.CreateAndOpenConnection(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 233
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.SetTransactionOrConnectionToCommand(ISqlCommand sqlCommand, ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 246
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 180
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, String commandText) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 436
+   at Implem.CodeDefiner.Functions.Rds.Parts.Tables.Exists(ISqlObjectFactory factory, String sourceTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\Parts\Tables.cs:line 153
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTablePart(ISqlObjectFactory factory, String generalTableName, String sourceTableName, TableTypes tableType, IEnumerable`1 columnDefinitionCollection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 109
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTableSet(ISqlObjectFactory factory, String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 88
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.<>c__DisplayClass0_0.<Configure>b__0(String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 19
+<INFO> TablesConfigurator.ConfigureTableSet: Demos
+<ERROR> <>c__DisplayClass0_0.<Configure>b__0: [Demos]: Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (99): Cannot assign requested address [::1]:5432
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open()
+   at Implem.PostgreSql.PostgreSqlConnection.Open() in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Rds\Implem.PostgreSql\PostgreSqlConnection.cs:line 98
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.CreateAndOpenConnection(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 233
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.SetTransactionOrConnectionToCommand(ISqlCommand sqlCommand, ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 246
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 180
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, String commandText) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 436
+   at Implem.CodeDefiner.Functions.Rds.Parts.Tables.Exists(ISqlObjectFactory factory, String sourceTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\Parts\Tables.cs:line 153
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTablePart(ISqlObjectFactory factory, String generalTableName, String sourceTableName, TableTypes tableType, IEnumerable`1 columnDefinitionCollection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 109
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTableSet(ISqlObjectFactory factory, String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 88
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.<>c__DisplayClass0_0.<Configure>b__0(String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 19
+<INFO> TablesConfigurator.ConfigureTableSet: Sessions
+<ERROR> <>c__DisplayClass0_0.<Configure>b__0: [Sessions]: Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (99): Cannot assign requested address [::1]:5432
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open()
+   at Implem.PostgreSql.PostgreSqlConnection.Open() in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Rds\Implem.PostgreSql\PostgreSqlConnection.cs:line 98
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.CreateAndOpenConnection(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 233
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.SetTransactionOrConnectionToCommand(ISqlCommand sqlCommand, ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 246
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 180
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, String commandText) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 436
+   at Implem.CodeDefiner.Functions.Rds.Parts.Tables.Exists(ISqlObjectFactory factory, String sourceTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\Parts\Tables.cs:line 153
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTablePart(ISqlObjectFactory factory, String generalTableName, String sourceTableName, TableTypes tableType, IEnumerable`1 columnDefinitionCollection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 109
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTableSet(ISqlObjectFactory factory, String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 88
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.<>c__DisplayClass0_0.<Configure>b__0(String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 19
+<INFO> TablesConfigurator.ConfigureTableSet: SysLogs
+<ERROR> <>c__DisplayClass0_0.<Configure>b__0: [SysLogs]: Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (99): Cannot assign requested address [::1]:5432
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open()
+   at Implem.PostgreSql.PostgreSqlConnection.Open() in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Rds\Implem.PostgreSql\PostgreSqlConnection.cs:line 98
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.CreateAndOpenConnection(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 233
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.SetTransactionOrConnectionToCommand(ISqlCommand sqlCommand, ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 246
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 180
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, String commandText) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 436
+   at Implem.CodeDefiner.Functions.Rds.Parts.Tables.Exists(ISqlObjectFactory factory, String sourceTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\Parts\Tables.cs:line 153
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTablePart(ISqlObjectFactory factory, String generalTableName, String sourceTableName, TableTypes tableType, IEnumerable`1 columnDefinitionCollection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 109
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTableSet(ISqlObjectFactory factory, String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 88
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.<>c__DisplayClass0_0.<Configure>b__0(String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 19
+<INFO> TablesConfigurator.ConfigureTableSet: Statuses
+<ERROR> <>c__DisplayClass0_0.<Configure>b__0: [Statuses]: Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (99): Cannot assign requested address [::1]:5432
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open()
+   at Implem.PostgreSql.PostgreSqlConnection.Open() in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Rds\Implem.PostgreSql\PostgreSqlConnection.cs:line 98
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.CreateAndOpenConnection(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 233
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.SetTransactionOrConnectionToCommand(ISqlCommand sqlCommand, ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 246
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 180
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, String commandText) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 436
+   at Implem.CodeDefiner.Functions.Rds.Parts.Tables.Exists(ISqlObjectFactory factory, String sourceTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\Parts\Tables.cs:line 153
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTablePart(ISqlObjectFactory factory, String generalTableName, String sourceTableName, TableTypes tableType, IEnumerable`1 columnDefinitionCollection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 109
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTableSet(ISqlObjectFactory factory, String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 88
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.<>c__DisplayClass0_0.<Configure>b__0(String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 19
+<INFO> TablesConfigurator.ConfigureTableSet: ReminderSchedules
+<ERROR> <>c__DisplayClass0_0.<Configure>b__0: [ReminderSchedules]: Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (99): Cannot assign requested address [::1]:5432
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open()
+   at Implem.PostgreSql.PostgreSqlConnection.Open() in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Rds\Implem.PostgreSql\PostgreSqlConnection.cs:line 98
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.CreateAndOpenConnection(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 233
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.SetTransactionOrConnectionToCommand(ISqlCommand sqlCommand, ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 246
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 180
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, String commandText) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 436
+   at Implem.CodeDefiner.Functions.Rds.Parts.Tables.Exists(ISqlObjectFactory factory, String sourceTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\Parts\Tables.cs:line 153
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTablePart(ISqlObjectFactory factory, String generalTableName, String sourceTableName, TableTypes tableType, IEnumerable`1 columnDefinitionCollection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 109
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTableSet(ISqlObjectFactory factory, String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 88
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.<>c__DisplayClass0_0.<Configure>b__0(String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 19
+<INFO> TablesConfigurator.ConfigureTableSet: Depts
+<ERROR> <>c__DisplayClass0_0.<Configure>b__0: [Depts]: Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (99): Cannot assign requested address [::1]:5432
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open()
+   at Implem.PostgreSql.PostgreSqlConnection.Open() in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Rds\Implem.PostgreSql\PostgreSqlConnection.cs:line 98
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.CreateAndOpenConnection(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 233
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.SetTransactionOrConnectionToCommand(ISqlCommand sqlCommand, ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 246
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 180
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, String commandText) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 436
+   at Implem.CodeDefiner.Functions.Rds.Parts.Tables.Exists(ISqlObjectFactory factory, String sourceTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\Parts\Tables.cs:line 153
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTablePart(ISqlObjectFactory factory, String generalTableName, String sourceTableName, TableTypes tableType, IEnumerable`1 columnDefinitionCollection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 109
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTableSet(ISqlObjectFactory factory, String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 88
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.<>c__DisplayClass0_0.<Configure>b__0(String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 19
+<INFO> TablesConfigurator.ConfigureTableSet: Groups
+<ERROR> <>c__DisplayClass0_0.<Configure>b__0: [Groups]: Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (99): Cannot assign requested address [::1]:5432
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open()
+   at Implem.PostgreSql.PostgreSqlConnection.Open() in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Rds\Implem.PostgreSql\PostgreSqlConnection.cs:line 98
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.CreateAndOpenConnection(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 233
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.SetTransactionOrConnectionToCommand(ISqlCommand sqlCommand, ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 246
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 180
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, String commandText) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 436
+   at Implem.CodeDefiner.Functions.Rds.Parts.Tables.Exists(ISqlObjectFactory factory, String sourceTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\Parts\Tables.cs:line 153
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTablePart(ISqlObjectFactory factory, String generalTableName, String sourceTableName, TableTypes tableType, IEnumerable`1 columnDefinitionCollection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 109
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTableSet(ISqlObjectFactory factory, String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 88
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.<>c__DisplayClass0_0.<Configure>b__0(String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 19
+<INFO> TablesConfigurator.ConfigureTableSet: GroupMembers
+<ERROR> <>c__DisplayClass0_0.<Configure>b__0: [GroupMembers]: Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (99): Cannot assign requested address [::1]:5432
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open()
+   at Implem.PostgreSql.PostgreSqlConnection.Open() in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Rds\Implem.PostgreSql\PostgreSqlConnection.cs:line 98
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.CreateAndOpenConnection(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 233
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.SetTransactionOrConnectionToCommand(ISqlCommand sqlCommand, ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 246
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 180
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, String commandText) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 436
+   at Implem.CodeDefiner.Functions.Rds.Parts.Tables.Exists(ISqlObjectFactory factory, String sourceTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\Parts\Tables.cs:line 153
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTablePart(ISqlObjectFactory factory, String generalTableName, String sourceTableName, TableTypes tableType, IEnumerable`1 columnDefinitionCollection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 109
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTableSet(ISqlObjectFactory factory, String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 88
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.<>c__DisplayClass0_0.<Configure>b__0(String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 19
+<INFO> TablesConfigurator.ConfigureTableSet: Registrations
+<ERROR> <>c__DisplayClass0_0.<Configure>b__0: [Registrations]: Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (99): Cannot assign requested address [::1]:5432
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open()
+   at Implem.PostgreSql.PostgreSqlConnection.Open() in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Rds\Implem.PostgreSql\PostgreSqlConnection.cs:line 98
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.CreateAndOpenConnection(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 233
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.SetTransactionOrConnectionToCommand(ISqlCommand sqlCommand, ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 246
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 180
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, String commandText) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 436
+   at Implem.CodeDefiner.Functions.Rds.Parts.Tables.Exists(ISqlObjectFactory factory, String sourceTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\Parts\Tables.cs:line 153
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTablePart(ISqlObjectFactory factory, String generalTableName, String sourceTableName, TableTypes tableType, IEnumerable`1 columnDefinitionCollection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 109
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTableSet(ISqlObjectFactory factory, String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 88
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.<>c__DisplayClass0_0.<Configure>b__0(String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 19
+<INFO> TablesConfigurator.ConfigureTableSet: Users
+<ERROR> <>c__DisplayClass0_0.<Configure>b__0: [Users]: Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (99): Cannot assign requested address [::1]:5432
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open()
+   at Implem.PostgreSql.PostgreSqlConnection.Open() in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Rds\Implem.PostgreSql\PostgreSqlConnection.cs:line 98
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.CreateAndOpenConnection(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 233
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.SetTransactionOrConnectionToCommand(ISqlCommand sqlCommand, ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 246
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 180
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, String commandText) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 436
+   at Implem.CodeDefiner.Functions.Rds.Parts.Tables.Exists(ISqlObjectFactory factory, String sourceTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\Parts\Tables.cs:line 153
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTablePart(ISqlObjectFactory factory, String generalTableName, String sourceTableName, TableTypes tableType, IEnumerable`1 columnDefinitionCollection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 109
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTableSet(ISqlObjectFactory factory, String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 88
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.<>c__DisplayClass0_0.<Configure>b__0(String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 19
+<INFO> TablesConfigurator.ConfigureTableSet: LoginKeys
+<ERROR> <>c__DisplayClass0_0.<Configure>b__0: [LoginKeys]: Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (99): Cannot assign requested address [::1]:5432
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open()
+   at Implem.PostgreSql.PostgreSqlConnection.Open() in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Rds\Implem.PostgreSql\PostgreSqlConnection.cs:line 98
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.CreateAndOpenConnection(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 233
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.SetTransactionOrConnectionToCommand(ISqlCommand sqlCommand, ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 246
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 180
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, String commandText) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 436
+   at Implem.CodeDefiner.Functions.Rds.Parts.Tables.Exists(ISqlObjectFactory factory, String sourceTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\Parts\Tables.cs:line 153
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTablePart(ISqlObjectFactory factory, String generalTableName, String sourceTableName, TableTypes tableType, IEnumerable`1 columnDefinitionCollection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 109
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTableSet(ISqlObjectFactory factory, String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 88
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.<>c__DisplayClass0_0.<Configure>b__0(String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 19
+<INFO> TablesConfigurator.ConfigureTableSet: MailAddresses
+<ERROR> <>c__DisplayClass0_0.<Configure>b__0: [MailAddresses]: Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (99): Cannot assign requested address [::1]:5432
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open()
+   at Implem.PostgreSql.PostgreSqlConnection.Open() in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Rds\Implem.PostgreSql\PostgreSqlConnection.cs:line 98
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.CreateAndOpenConnection(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 233
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.SetTransactionOrConnectionToCommand(ISqlCommand sqlCommand, ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 246
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 180
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, String commandText) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 436
+   at Implem.CodeDefiner.Functions.Rds.Parts.Tables.Exists(ISqlObjectFactory factory, String sourceTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\Parts\Tables.cs:line 153
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTablePart(ISqlObjectFactory factory, String generalTableName, String sourceTableName, TableTypes tableType, IEnumerable`1 columnDefinitionCollection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 109
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTableSet(ISqlObjectFactory factory, String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 88
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.<>c__DisplayClass0_0.<Configure>b__0(String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 19
+<INFO> TablesConfigurator.ConfigureTableSet: OutgoingMails
+<ERROR> <>c__DisplayClass0_0.<Configure>b__0: [OutgoingMails]: Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (99): Cannot assign requested address [::1]:5432
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open()
+   at Implem.PostgreSql.PostgreSqlConnection.Open() in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Rds\Implem.PostgreSql\PostgreSqlConnection.cs:line 98
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.CreateAndOpenConnection(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 233
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.SetTransactionOrConnectionToCommand(ISqlCommand sqlCommand, ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 246
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 180
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, String commandText) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 436
+   at Implem.CodeDefiner.Functions.Rds.Parts.Tables.Exists(ISqlObjectFactory factory, String sourceTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\Parts\Tables.cs:line 153
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTablePart(ISqlObjectFactory factory, String generalTableName, String sourceTableName, TableTypes tableType, IEnumerable`1 columnDefinitionCollection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 109
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTableSet(ISqlObjectFactory factory, String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 88
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.<>c__DisplayClass0_0.<Configure>b__0(String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 19
+<INFO> TablesConfigurator.ConfigureTableSet: Items
+<ERROR> <>c__DisplayClass0_0.<Configure>b__0: [Items]: Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (99): Cannot assign requested address [::1]:5432
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open()
+   at Implem.PostgreSql.PostgreSqlConnection.Open() in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Rds\Implem.PostgreSql\PostgreSqlConnection.cs:line 98
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.CreateAndOpenConnection(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 233
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.SetTransactionOrConnectionToCommand(ISqlCommand sqlCommand, ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 246
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 180
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, String commandText) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 436
+   at Implem.CodeDefiner.Functions.Rds.Parts.Tables.Exists(ISqlObjectFactory factory, String sourceTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\Parts\Tables.cs:line 153
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTablePart(ISqlObjectFactory factory, String generalTableName, String sourceTableName, TableTypes tableType, IEnumerable`1 columnDefinitionCollection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 109
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTableSet(ISqlObjectFactory factory, String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 88
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.<>c__DisplayClass0_0.<Configure>b__0(String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 19
+<INFO> TablesConfigurator.ConfigureTableSet: Sites
+<ERROR> <>c__DisplayClass0_0.<Configure>b__0: [Sites]: Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (99): Cannot assign requested address [::1]:5432
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open()
+   at Implem.PostgreSql.PostgreSqlConnection.Open() in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Rds\Implem.PostgreSql\PostgreSqlConnection.cs:line 98
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.CreateAndOpenConnection(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 233
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.SetTransactionOrConnectionToCommand(ISqlCommand sqlCommand, ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 246
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 180
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, String commandText) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 436
+   at Implem.CodeDefiner.Functions.Rds.Parts.Tables.Exists(ISqlObjectFactory factory, String sourceTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\Parts\Tables.cs:line 153
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTablePart(ISqlObjectFactory factory, String generalTableName, String sourceTableName, TableTypes tableType, IEnumerable`1 columnDefinitionCollection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 109
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTableSet(ISqlObjectFactory factory, String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 88
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.<>c__DisplayClass0_0.<Configure>b__0(String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 19
+<INFO> TablesConfigurator.ConfigureTableSet: Orders
+<ERROR> <>c__DisplayClass0_0.<Configure>b__0: [Orders]: Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (99): Cannot assign requested address [::1]:5432
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open()
+   at Implem.PostgreSql.PostgreSqlConnection.Open() in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Rds\Implem.PostgreSql\PostgreSqlConnection.cs:line 98
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.CreateAndOpenConnection(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 233
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.SetTransactionOrConnectionToCommand(ISqlCommand sqlCommand, ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 246
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 180
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, String commandText) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 436
+   at Implem.CodeDefiner.Functions.Rds.Parts.Tables.Exists(ISqlObjectFactory factory, String sourceTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\Parts\Tables.cs:line 153
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTablePart(ISqlObjectFactory factory, String generalTableName, String sourceTableName, TableTypes tableType, IEnumerable`1 columnDefinitionCollection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 109
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTableSet(ISqlObjectFactory factory, String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 88
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.<>c__DisplayClass0_0.<Configure>b__0(String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 19
+<INFO> TablesConfigurator.ConfigureTableSet: ExportSettings
+<ERROR> <>c__DisplayClass0_0.<Configure>b__0: [ExportSettings]: Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (99): Cannot assign requested address [::1]:5432
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open()
+   at Implem.PostgreSql.PostgreSqlConnection.Open() in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Rds\Implem.PostgreSql\PostgreSqlConnection.cs:line 98
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.CreateAndOpenConnection(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 233
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.SetTransactionOrConnectionToCommand(ISqlCommand sqlCommand, ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 246
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 180
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, String commandText) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 436
+   at Implem.CodeDefiner.Functions.Rds.Parts.Tables.Exists(ISqlObjectFactory factory, String sourceTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\Parts\Tables.cs:line 153
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTablePart(ISqlObjectFactory factory, String generalTableName, String sourceTableName, TableTypes tableType, IEnumerable`1 columnDefinitionCollection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 109
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTableSet(ISqlObjectFactory factory, String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 88
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.<>c__DisplayClass0_0.<Configure>b__0(String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 19
+<INFO> TablesConfigurator.ConfigureTableSet: Links
+<ERROR> <>c__DisplayClass0_0.<Configure>b__0: [Links]: Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (99): Cannot assign requested address [::1]:5432
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open()
+   at Implem.PostgreSql.PostgreSqlConnection.Open() in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Rds\Implem.PostgreSql\PostgreSqlConnection.cs:line 98
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.CreateAndOpenConnection(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 233
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.SetTransactionOrConnectionToCommand(ISqlCommand sqlCommand, ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 246
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 180
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, String commandText) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 436
+   at Implem.CodeDefiner.Functions.Rds.Parts.Tables.Exists(ISqlObjectFactory factory, String sourceTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\Parts\Tables.cs:line 153
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTablePart(ISqlObjectFactory factory, String generalTableName, String sourceTableName, TableTypes tableType, IEnumerable`1 columnDefinitionCollection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 109
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTableSet(ISqlObjectFactory factory, String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 88
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.<>c__DisplayClass0_0.<Configure>b__0(String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 19
+<INFO> TablesConfigurator.ConfigureTableSet: Binaries
+<ERROR> <>c__DisplayClass0_0.<Configure>b__0: [Binaries]: Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (99): Cannot assign requested address [::1]:5432
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open()
+   at Implem.PostgreSql.PostgreSqlConnection.Open() in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Rds\Implem.PostgreSql\PostgreSqlConnection.cs:line 98
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.CreateAndOpenConnection(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 233
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.SetTransactionOrConnectionToCommand(ISqlCommand sqlCommand, ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 246
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 180
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, String commandText) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 436
+   at Implem.CodeDefiner.Functions.Rds.Parts.Tables.Exists(ISqlObjectFactory factory, String sourceTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\Parts\Tables.cs:line 153
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTablePart(ISqlObjectFactory factory, String generalTableName, String sourceTableName, TableTypes tableType, IEnumerable`1 columnDefinitionCollection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 109
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTableSet(ISqlObjectFactory factory, String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 88
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.<>c__DisplayClass0_0.<Configure>b__0(String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 19
+<INFO> TablesConfigurator.ConfigureTableSet: Permissions
+<ERROR> <>c__DisplayClass0_0.<Configure>b__0: [Permissions]: Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (99): Cannot assign requested address [::1]:5432
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open()
+   at Implem.PostgreSql.PostgreSqlConnection.Open() in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Rds\Implem.PostgreSql\PostgreSqlConnection.cs:line 98
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.CreateAndOpenConnection(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 233
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.SetTransactionOrConnectionToCommand(ISqlCommand sqlCommand, ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 246
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 180
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, String commandText) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 436
+   at Implem.CodeDefiner.Functions.Rds.Parts.Tables.Exists(ISqlObjectFactory factory, String sourceTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\Parts\Tables.cs:line 153
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTablePart(ISqlObjectFactory factory, String generalTableName, String sourceTableName, TableTypes tableType, IEnumerable`1 columnDefinitionCollection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 109
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTableSet(ISqlObjectFactory factory, String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 88
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.<>c__DisplayClass0_0.<Configure>b__0(String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 19
+<INFO> TablesConfigurator.ConfigureTableSet: Issues
+<ERROR> <>c__DisplayClass0_0.<Configure>b__0: [Issues]: Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (99): Cannot assign requested address [::1]:5432
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open()
+   at Implem.PostgreSql.PostgreSqlConnection.Open() in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Rds\Implem.PostgreSql\PostgreSqlConnection.cs:line 98
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.CreateAndOpenConnection(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 233
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.SetTransactionOrConnectionToCommand(ISqlCommand sqlCommand, ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 246
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 180
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, String commandText) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 436
+   at Implem.CodeDefiner.Functions.Rds.Parts.Tables.Exists(ISqlObjectFactory factory, String sourceTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\Parts\Tables.cs:line 153
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTablePart(ISqlObjectFactory factory, String generalTableName, String sourceTableName, TableTypes tableType, IEnumerable`1 columnDefinitionCollection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 109
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTableSet(ISqlObjectFactory factory, String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 88
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.<>c__DisplayClass0_0.<Configure>b__0(String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 19
+<INFO> TablesConfigurator.ConfigureTableSet: Results
+<ERROR> <>c__DisplayClass0_0.<Configure>b__0: [Results]: Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (99): Cannot assign requested address [::1]:5432
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open()
+   at Implem.PostgreSql.PostgreSqlConnection.Open() in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Rds\Implem.PostgreSql\PostgreSqlConnection.cs:line 98
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.CreateAndOpenConnection(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 233
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.SetTransactionOrConnectionToCommand(ISqlCommand sqlCommand, ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 246
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 180
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, String commandText) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 436
+   at Implem.CodeDefiner.Functions.Rds.Parts.Tables.Exists(ISqlObjectFactory factory, String sourceTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\Parts\Tables.cs:line 153
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTablePart(ISqlObjectFactory factory, String generalTableName, String sourceTableName, TableTypes tableType, IEnumerable`1 columnDefinitionCollection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 109
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTableSet(ISqlObjectFactory factory, String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 88
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.<>c__DisplayClass0_0.<Configure>b__0(String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 19
+<INFO> TablesConfigurator.ConfigureTableSet: Wikis
+<ERROR> <>c__DisplayClass0_0.<Configure>b__0: [Wikis]: Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (99): Cannot assign requested address [::1]:5432
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open()
+   at Implem.PostgreSql.PostgreSqlConnection.Open() in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Rds\Implem.PostgreSql\PostgreSqlConnection.cs:line 98
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.CreateAndOpenConnection(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 233
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.SetTransactionOrConnectionToCommand(ISqlCommand sqlCommand, ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 246
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 180
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteTable(ISqlObjectFactory factory, String commandText) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 436
+   at Implem.CodeDefiner.Functions.Rds.Parts.Tables.Exists(ISqlObjectFactory factory, String sourceTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\Parts\Tables.cs:line 153
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTablePart(ISqlObjectFactory factory, String generalTableName, String sourceTableName, TableTypes tableType, IEnumerable`1 columnDefinitionCollection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 109
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureTableSet(ISqlObjectFactory factory, String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 88
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.<>c__DisplayClass0_0.<Configure>b__0(String generalTableName) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 19
+<INFO> TablesConfigurator.ConfigureFullTextIndex: 
+<ERROR> TablesConfigurator.Configure: [ConfigureFullTextIndex]: Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (99): Cannot assign requested address [::1]:5432
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open()
+   at Implem.PostgreSql.PostgreSqlConnection.Open() in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Rds\Implem.PostgreSql\PostgreSqlConnection.cs:line 98
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.CreateAndOpenConnection(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 233
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.SetTransactionOrConnectionToCommand(ISqlCommand sqlCommand, ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 246
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteScalar(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 147
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteScalar_string(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 398
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.ConfigureFullTextIndex(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 49
+   at Implem.CodeDefiner.Functions.Rds.TablesConfigurator.Configure(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\TablesConfigurator.cs:line 34
+<INFO> PrivilegeConfigurator.Execute: Implem.Pleasanter_Owner
+<INFO> PrivilegeConfigurator.Execute: Implem.Pleasanter_User
+<ERROR> Configurator.Configure: Npgsql.NpgsqlException (0x80004005): Exception while connecting
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (99): Cannot assign requested address [::1]:5432
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.Connect(NpgsqlTimeout timeout)
+   at Npgsql.NpgsqlConnector.RawOpen(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.AllocateLong(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<>c__DisplayClass32_0.<<Open>g__OpenLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnection.Open()
+   at Implem.PostgreSql.PostgreSqlConnection.Open() in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Rds\Implem.PostgreSql\PostgreSqlConnection.cs:line 98
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.CreateAndOpenConnection(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 233
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.SetTransactionOrConnectionToCommand(ISqlCommand sqlCommand, ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 246
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteNonQuery(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 118
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteNonQuery(ISqlObjectFactory factory, SqlStatement sqlStatement, IDbTransaction dbTransaction, IDbConnection dbConnection) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 323
+   at Implem.Libraries.DataSources.SqlServer.SqlIo.ExecuteNonQuery(ISqlObjectFactory factory, IDbTransaction dbTransaction, IDbConnection dbConnection, String commandText) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.Libraries\DataSources\SqlServer\SqlIo.cs:line 336
+   at Implem.CodeDefiner.Functions.Rds.PrivilegeConfigurator.Execute(ISqlObjectFactory factory, String connectionString) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\PrivilegeConfigurator.cs:line 45
+   at Implem.CodeDefiner.Functions.Rds.PrivilegeConfigurator.Configure(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\PrivilegeConfigurator.cs:line 17
+   at Implem.CodeDefiner.Functions.Rds.Configurator.Configure(ISqlObjectFactory factory) in D:\git\Pleasanter.NetCore\Implem.Pleasanter.NetCore\Implem.CodeDefiner\Functions\Rds\Configurator.cs:line 19
+

@@ -2,25 +2,26 @@
 ### Step1: Build source codes.
 ### ---------------------------
 
-FROM centos:centos7
-# FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
-#FROM mcr.microsoft.com/dotnet/core/sdk:3.1
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 as build
 
-# Install Requirement Packages
-RUN yum -y update \
- && yum install -y git wget unzip \
- && rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm \
- && yum -y update \
- && yum -y install dotnet-sdk-3.1 \
- && yum install -y epel-release \
- && yum install -y libgdiplus
+WORKDIR /
 
-# Download built tools
+RUN git clone https://github.com/Implem/Implem.Pleasanter.NetCore.git plesanter
+
+WORKDIR /plesanter/cmdnetcore
+
+RUN chmod +x build.sh && ./build.sh
+
+WORKDIR /plesanter/publish
+
+RUN ls
+
+FROM mcr.microsoft.com/dotnet/core/runtime:3.1-buster-slim as runtime
 
 RUN mkdir /web
-ADD Pleasanter.NetCore_1.1.0.0.zip /
-RUN unzip /Pleasanter.NetCore_1.1.0.0.zip
-RUN mv /pleasanter/* /web
+
+COPY --from=build /plesanter/publish/Implem.CodeDefiner /web
+COPY --from=build /plesanter/publish/Implem.Pleasanter /web
 
 ADD startup.sh /
 RUN chmod +x startup.sh

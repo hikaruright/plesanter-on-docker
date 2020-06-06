@@ -1,15 +1,6 @@
 version: '3'
 
 services:
-    nginx:
-        container_name: plesanter_nginx
-        image: nginx:1.19
-        tty: true
-        ports:
-            - 80:80
-        volumes: 
-            - ./web/default.conf:/etc/nginx/conf.d/default.conf
-
     app:
         container_name: plesanter_app
         build: ./app
@@ -32,3 +23,7 @@ services:
             POSTGRES_DB: Implem.Pleasanter
         volumes:
             - ./db:/var/lib/postgresql/data
+
+# networks: 
+#     gitlab-and-redmine_default:
+#         external: true

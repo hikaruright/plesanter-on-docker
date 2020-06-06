@@ -1,6 +1,15 @@
 version: '3'
 
 services:
+    nginx:
+        container_name: plesanter_nginx
+        image: nginx:1.19
+        tty: true
+        ports:
+            - 80:80
+        volumes: 
+            - ./web/default.conf:/etc/nginx/conf.d/default.conf
+
     app:
         container_name: plesanter_app
         build: ./app
@@ -14,7 +23,6 @@ services:
             # - ASPNETCORE_URLS=https://+;http://+;
             # ↓一説によるとこれで直るらしいがローカルアクセスすら無理になる
             # - ASPNETCORE_URLS=http://+;
-
     db:
         container_name: plesanter_db
         image: postgres:12.3-alpine
@@ -22,3 +30,5 @@ services:
             POSTGRES_USER: postgres
             POSTGRES_PASSWORD: plesanter
             POSTGRES_DB: Implem.Pleasanter
+        volumes:
+            - ./db:/var/lib/postgresql/data

@@ -23,7 +23,3 @@ services:
             POSTGRES_DB: Implem.Pleasanter
         volumes:
             - ./db:/var/lib/postgresql/data
-
-# networks: 
-#     gitlab-and-redmine_default:
-#         external: true
